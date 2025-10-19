@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="stylesheet" href="src/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>type-form</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" id="nome" placeholder="Nome" />
+            <input type="number" id="idade" placeholder="Idade" />
+            <select id="genero">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outro">Outro</option>
+            </select>
+            <input
+                type="text"
+                id="hobbies"
+                placeholder="Hobbies (separados por vírgula)"
+            />
+            <button id="adicionar">Adicionar Pessoa</button>
+
+            <div id="lista">
+                <p id="lista-vazia">Nenhuma pessoa adicionada ainda.</p>
+            </div>
+        </div>
+        <script type="module" src="src/ts/DOM.ts"></script>
+    </body>
+</html>
