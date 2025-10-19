@@ -1,0 +1,220 @@
+/* Estilos compactos e integrados para type-form (substitui o anterior) */
+
+:root {
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --accent: #4f46e5;
+    --muted: #6b7280;
+    --danger: #ef4444;
+    --glass: rgba(79, 70, 229, 0.06);
+    --radius: 8px;
+    --shadow: 0 6px 14px rgba(15, 23, 42, 0.06);
+    --max-width: 920px;
+    --gap: 8px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+        "Helvetica Neue";
+}
+
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #f8f9ff 0%, var(--bg) 100%);
+    color: #0f172a;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container principal como card compacto */
+#app {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background: transparent;
+}
+
+/* Barra compacta de controle (inputs alinhados) */
+#app > input,
+#app > select,
+#app > button {
+    margin: 0;
+}
+
+/* Wrapping flex para inputs no topo */
+.controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--card);
+    padding: 10px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+/* Aplicar visual compacto aos campos */
+#nome,
+#idade,
+#genero,
+#hobbies {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    background: #fff;
+    font-size: 13px;
+    color: #0b1220;
+}
+
+/* tamanho relativo */
+#nome {
+    flex: 1 1 220px;
+    min-width: 160px;
+}
+#idade {
+    width: 88px;
+    flex: 0 0 88px;
+}
+#genero {
+    width: 120px;
+    flex: 0 0 120px;
+}
+#hobbies {
+    flex: 1 1 240px;
+    min-width: 160px;
+}
+
+/* botão compacto */
+#adicionar {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--accent), #7c3aed);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.09);
+}
+
+/* espaçamento entre barra e lista */
+#lista {
+    margin-top: 12px;
+}
+
+/* Lista em layout mais compacto */
+#lista {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* Card menor e mais compacto */
+.pessoa {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(15, 23, 42, 0.04);
+    border: 1px solid rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+    background: var(--card);
+}
+
+/* faixa fina de cor para identificar */
+.pessoa::before {
+    width: 4px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, var(--accent), #7c3aed);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    content: "";
+    position: absolute;
+}
+
+/* deslocamento de conteúdo */
+.pessoa > * {
+    margin-left: 8px;
+}
+
+.pessoa-nome {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 700;
+}
+.pessoa-idade,
+.pessoa-genero {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* Hobbies em chips menores */
+.pessoa-hobbies {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.pessoa-hobbies li {
+    background: var(--glass);
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 999px;
+    color: #312e81;
+}
+
+/* remover discreto */
+.remover {
+    background: transparent;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    color: var(--danger);
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    width: max-content;
+}
+
+/* mensagem vazia centralizada */
+#lista-vazia {
+    grid-column: 1/-1;
+    text-align: center;
+    color: var(--muted);
+    padding: 12px 0;
+    font-style: italic;
+}
+
+/* Responsivo: barra em colunas em telas maiores */
+@media (min-width: 720px) {
+    .controls {
+        padding: 12px;
+        gap: 10px;
+    }
+    #app {
+        display: block;
+    }
+    #nome {
+        min-width: 200px;
+    }
+    #hobbies {
+        min-width: 260px;
+    }
+}
+
+/* foco acessível */
+#adicionar:focus,
+.remover:focus {
+    outline: 3px solid rgba(79, 70, 229, 0.12);
+    outline-offset: 2px;
+}
