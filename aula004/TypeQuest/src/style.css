@@ -1,0 +1,117 @@
+/* RESET / base (mantive seu estilo original acima) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 8px 0 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* lista: grade compacta com rolagem */
+#listaPersonagens {
+    margin-top: 12px;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 6px;
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+.personagem {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: #222;
+}
+
+/* header */
+.personagem-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.personagem .nome {
+    font-weight: 700;
+}
+
+.badge.classe {
+    padding: 4px 8px;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* botão de excluir */
+.btn-excluir {
+    background: transparent;
+    border: none;
+    color: #999;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+}
+.btn-excluir:hover {
+    background: rgba(0, 0, 0, 0.06);
+    color: #c0392b;
+}
+
+/* cores por classe (adicione/ajuste conforme quiser) */
+.personagem.Guerreiro .badge {
+    background: #c0392b;
+} /* vermelho */
+.personagem.Mago .badge {
+    background: #8e44ad;
+} /* roxo */
+.personagem.Arqueiro .badge {
+    background: #27ae60;
+} /* verde */
+.personagem.Clerigo .badge {
+    background: #2980b9;
+} /* azul */
+.personagem.Ladino .badge {
+    background: #f39c12;
+} /* laranja */
+
+/* corpo */
+.personagem-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+    color: #555;
+}
+
+.personagem-body small {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 4px 6px;
+    border-radius: 6px;
+}
