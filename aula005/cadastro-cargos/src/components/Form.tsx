@@ -1,6 +1,22 @@
+import { useState } from "react";
+import { Funcionario } from "../ts/build";
+import { useFuncionarios } from "../ts/store";
+
 export function Form() {
+    const { listaFuncionarios, updateLista } = useFuncionarios();
+
+    const [nome, setNome] = useState("");
+    const [cargo, setCargo] = useState("gerente");
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const funcionario = new Funcionario(nome, cargo);
+        updateLista([...listaFuncionarios, funcionario]);
+    };
+
     return (
-        <div className="form">
+        <div className="form" onSubmit={handleSubmit}>
             <h1>Cadastrar Novo Funcionario</h1>
             <span className="desc">
                 Preencha os detalhes para adicionar um novo funcionário ao
@@ -8,10 +24,22 @@ export function Form() {
             </span>
             <form>
                 <h2>Nome do Funcionário</h2>
-                <input type="text" placeholder="Nome completo do funcionário" />
+                <input
+                    type="text"
+                    placeholder="Nome completo do funcionário"
+                    value={nome}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                        setNome(e.target.value)
+                    }
+                />
 
                 <h2>Cargo</h2>
-                <select>
+                <select
+                    value={cargo}
+                    onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                        setCargo(e.target.value)
+                    }
+                >
                     <option value="gerente">Gerente</option>
                     <option value="analista">Analista</option>
                     <option value="desenvolvedor">Desenvolvedor</option>
