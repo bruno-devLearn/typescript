@@ -81,11 +81,97 @@ main {
 }
 
 .form form button:hover {
-    color: #ffffffff; /* white */
     background: #194f75ff;
 }
-/* Pressed */
-.form form button:hover:active {
-    color: #ffffffff; /* white */
+
+.form form button:active {
     background: #10324bff;
+}
+
+/* TABLE */
+.table {
+    width: 100%;
+    box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1f;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.table h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #171a1fff;
+    margin-bottom: 14px;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Cabeçalho fixo */
+.table table thead,
+.table table thead tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Tbody com scroll */
+.table table tbody {
+    display: block;
+    max-height: 400px; /* altura do scroll */
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* Cada linha do tbody */
+.table table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Padding das células */
+.table table th,
+.table table td {
+    padding: 16px;
+    text-align: left;
+}
+
+/* Box-shadow tipo linha entre linhas */
+.table table tbody tr:not(:last-child),
+.table table thead {
+    box-shadow: 0 1px 0 #171a1f0e, 0 2px 0 #171a1f1f;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: #565d6dff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete {
+    width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(231, 87, 96);
+    opacity: 1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
