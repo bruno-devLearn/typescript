@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+main {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form {
+    padding: 24px;
+    box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1f;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.form h1 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #171a1fff;
+    margin-bottom: 3px;
+}
+
+.form .desc {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #565d6dff;
+}
+
+.form form {
+    margin-top: 15px;
+}
+
+.form form h2 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #171a1fff;
+    margin-bottom: 5px;
+}
+
+.form form input,
+.form form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    background: #ffffffff;
+    border-radius: 6px;
+    border: 1px solid #dee1e6ff;
+    outline: none;
+}
+
+.form form button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #ffffffff; /* white */
+    background: #2577b1ff;
+    opacity: 1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form form button:hover {
+    background: #194f75ff;
+}
+
+.form form button:active {
+    background: #10324bff;
+}
+
+/* TABLE */
+.table {
+    width: 100%;
+    box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1f;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.table h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #171a1fff;
+    margin-bottom: 14px;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Cabeçalho fixo */
+.table table thead,
+.table table thead tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Tbody com scroll */
+.table table tbody {
+    display: block;
+    max-height: 400px; /* altura do scroll */
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* Cada linha do tbody */
+.table table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Padding das células */
+.table table th,
+.table table td {
+    padding: 16px;
+    text-align: left;
+}
+
+/* Box-shadow tipo linha entre linhas */
+.table table tbody tr:not(:last-child),
+.table table thead {
+    box-shadow: 0 1px 0 #171a1f0e, 0 2px 0 #171a1f1f;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: #565d6dff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete {
+    width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(231, 87, 96);
+    opacity: 1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
