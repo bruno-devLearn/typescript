@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+main {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form {
+    padding: 24px;
+    box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1f;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.form h1 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #171a1fff;
+    margin-bottom: 3px;
+}
+
+.form .desc {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #565d6dff;
+}
+
+.form form {
+    margin-top: 15px;
+}
+
+.form form h2 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #171a1fff;
+    margin-bottom: 5px;
+}
+
+.form form input,
+.form form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    background: #ffffffff;
+    border-radius: 6px;
+    border: 1px solid #dee1e6ff;
+    outline: none;
+}
+
+.form form button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #ffffffff; /* white */
+    background: #2577b1ff;
+    opacity: 1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form form button:hover {
+    color: #ffffffff; /* white */
+    background: #194f75ff;
+}
+/* Pressed */
+.form form button:hover:active {
+    color: #ffffffff; /* white */
+    background: #10324bff;
+}
