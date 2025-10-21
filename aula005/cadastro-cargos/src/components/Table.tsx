@@ -1,7 +1,9 @@
-import editIcon from "../assets/lucide-Pencil-Outlined.svg";
 import deleteIcon from "../assets/lucide-Trash2-Outlined.svg";
+import { useFuncionarios } from "../ts/store";
 
 export function Table() {
+    const { listaFuncionarios, updateLista } = useFuncionarios();
+
     return (
         <div className="table">
             <h2>Lista de Funcionários</h2>
@@ -14,20 +16,28 @@ export function Table() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Ana Silva</td>
-                        <td>Desenvolvedor</td>
-                        <td>
-                            <div className="actions">
-                                <button className="edit">
-                                    <img src={editIcon} />
-                                </button>
-                                <button className="delete">
-                                    <img src={deleteIcon} />
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
+                    {listaFuncionarios.map((funcionario) => (
+                        <tr key={crypto.randomUUID()}>
+                            <td>{funcionario.nome}</td>
+                            <td>{funcionario.cargo}</td>
+                            <td>
+                                <div className="actions">
+                                    <button
+                                        className="delete"
+                                        onClick={() => {
+                                            updateLista(
+                                                listaFuncionarios.filter(
+                                                    (f) => f !== funcionario
+                                                )
+                                            );
+                                        }}
+                                    >
+                                        <img src={deleteIcon} />
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>
