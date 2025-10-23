@@ -20,8 +20,41 @@ header a {
     font-weight: 500;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    width: 100vw;
+    height: 100vh;
+}
+
+main.search {
+    background-color: oklch(0.985 0.002 247.839);
+}
+
+main .input-div {
+    max-width: 448px;
+    width: 100%;
+}
+
+main .input-div input {
+    padding: 12px 16px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: oklch(0.145 0 0);
+    background: transparent;
+    border-radius: 10px;
+    outline-color: 1px oklch(0.985 0.002 247.839);
+    border: 1px solid oklch(0.872 0.01 258.338);
+}
+
 @media (max-width: 644px) {
     header {
+        padding: 16px;
+    }
+
+    main {
         padding: 16px;
     }
 }
