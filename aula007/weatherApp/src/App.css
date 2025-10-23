@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 24px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid oklch(0.928 0.006 264.531);
+    font-family: "Roboto Mono", monospace;
+}
+
+header a {
+    color: oklch(0.278 0.033 256.848);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media (max-width: 644px) {
+    header {
+        padding: 16px;
+    }
+}
