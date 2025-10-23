@@ -10,9 +10,7 @@ function App() {
         // Provide the client to your App
         <QueryClientProvider client={queryClient}>
             <Header />
-            <main className="search">
-                <Outlet />
-            </main>
+            <Outlet />
         </QueryClientProvider>
     );
 }

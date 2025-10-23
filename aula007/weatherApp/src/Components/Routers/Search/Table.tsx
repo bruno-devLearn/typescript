@@ -1,9 +1,5 @@
-import { Empty, NotFound, TableResult } from "./Table-values";
+// import { Empty, NotFound, TableResult } from "./Table-values";
 
 export function Table() {
-    return (
-        <div className="table">
-            <Empty />
-        </div>
-    );
+    return <div className="table">{/* Empty */}</div>;
 }
