@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+header {
+    padding: 24px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid oklch(0.928 0.006 264.531);
+}
+
+header a {
+    color: oklch(0.278 0.033 256.848);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    padding: 32px;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    gap: 32px;
+}
+
+main.search {
+    background-color: oklch(0.985 0.002 247.839);
+}
+
+main.result {
+    background-color: none;
+    background-image: linear-gradient(
+        to right bottom,
+        oklch(0.97 0.014 254.604) 0%,
+        oklch(0.932 0.032 255.585) 100%
+    );
+}
+
+main .input-div {
+    max-width: 448px;
+    width: 100%;
+}
+
+main .input-div input {
+    padding: 12px 16px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: oklch(0.145 0 0);
+    background: transparent;
+    border-radius: 10px;
+    outline-color: 1px oklch(0.985 0.002 247.839);
+    border: 1px solid oklch(0.872 0.01 258.338);
+}
+
+main .table {
+    max-width: 448px;
+    width: 100%;
+    border: 1px solid oklch(0.872 0.01 258.338);
+    padding: 16px;
+    border-radius: 10px;
+    height: 600px;
+}
+
+main .table .empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: oklch(0.707 0.022 261.325);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+main .table .empty .icon {
+    font-size: 48px;
+}
+
+main .table .empty .text .desc {
+    font-size: 14px;
+}
+
+main .table .table-content {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main .table .table-content a {
+    text-decoration: none;
+}
+
+main .table .table-content .table-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid oklch(0.928 0.006 264.531);
+    border-radius: 10px;
+}
+
+main .table .table-content .table-card h2 {
+    color: oklch(0.145 0 0);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+main .table .table-content .table-card span {
+    color: oklch(0.446 0.03 256.802);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+main .table .table-content .table-card .temp {
+    font-size: 16px;
+    font-weight: 400;
+    color: oklch(0.145 0 0);
+}
+
+main .result-page {
+    max-width: 672px;
+    width: 100%;
+}
+
+main .result-page .back {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 32px;
+    color: oklch(0.373 0.034 259.733);
+}
+
+main .result-page a {
+    text-decoration: none;
+}
+
+main .result-page .content {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 32px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.city-title {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.city-title h2 {
+    color: oklch(0.21 0.034 264.665);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.city-title p {
+    font-size: 16px;
+    font-weight: 400;
+    color: oklch(0.551 0.027 264.364);
+}
+
+.city-content {
+    margin-bottom: 32px;
+}
+
+.city-content .img img {
+    width: 128px;
+}
+
+.city-content .temp {
+    margin-bottom: 8px;
+    color: oklch(0.145 0 0);
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.city-content .condition {
+    font-weight: 400;
+    font-size: 16px;
+    color: oklch(0.446 0.03 256.802);
+}
+
+.city-content .feel {
+    font-weight: 400;
+    font-size: 16px;
+    color: oklch(0.551 0.027 264.364);
+    margin-top: 8px;
+}
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.infos .info {
+    padding: 16px;
+    width: 192px;
+    text-align: center;
+    background-color: oklch(0.97 0.014 254.604);
+    border-radius: 16px;
+}
+
+.infos .info .title {
+    margin-bottom: 4px;
+    color: oklch(0.446 0.03 256.802);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.infos .info .desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: oklch(0.21 0.034 264.665);
+}
+
+@media (max-width: 644px) {
+    header {
+        padding: 16px;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    main .result-page .content {
+        padding: 24px;
+    }
+}
