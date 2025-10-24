@@ -1,5 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 import { NavLink } from "react-router";
+import { useWeather } from "../../../ts/store";
 
 export function Empty() {
     return (
@@ -30,17 +31,27 @@ export function NotFound() {
 }
 
 export function TableResult() {
+    const { weatherData, updateCity } = useWeather();
+
     return (
         <div className="table-content">
-            <NavLink to="/city">
-                <div className="table-card">
-                    <div className="city">
-                        <h2>São Paulo</h2>
-                        <span>Ensolarado</span>
+            {weatherData?.map((city) => (
+                <NavLink
+                    to="/city"
+                    key={crypto.randomUUID()}
+                    onClick={() => updateCity(city)}
+                >
+                    <div className="table-card">
+                        <div className="city">
+                            <h2>{city.location.name}</h2>
+                            <span>{city.current.condition.text}</span>
+                        </div>
+                        <div className="temp">
+                            {Math.floor(city.current.temp_c)}°
+                        </div>
                     </div>
-                    <div className="temp">25°</div>
-                </div>
-            </NavLink>
+                </NavLink>
+            ))}
         </div>
     );
 }
